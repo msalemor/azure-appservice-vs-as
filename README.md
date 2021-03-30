@@ -35,7 +35,7 @@
 - External and internal modes
   - In internal mode the app service gets a private IP
 
-### 3.1 - ASE requirements
+### 3.1 - DNS requirements
 
 - Internal DNS or Azure Private Zone
   - To configure DNS in your own DNS server with your ILB ASE:
@@ -50,6 +50,9 @@
     - create an A record in that zone that points @ to the ILB IP address
     - create an A record in that zone that points *.scm to the ILB IP address
 
+
+### 3.2 - Port reqruiements
+
 - The required entries in an NSG, for an ASE to function, are to allow traffic:
   - Inbound
     - TCP from the IP service tag AppServiceManagement on ports 454,455
@@ -63,11 +66,11 @@
     - TCP to all IPs on port 12000
     - to the ASE subnet on all ports
 
-### 3.2 - ASE Networking
+### 3.3 - Other networking capabilities
 
 - Can set UDR to for example for all traffic through a Firewall
 
-### 3.3 - ASE Recommended for
+### 3.3 - Recommended for
 
 - Highly regulated environments (PCI, HIPAA, Government)
 - For intensive loads where hardware and network isolation are required
