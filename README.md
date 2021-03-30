@@ -1,6 +1,6 @@
 # Azure App Service vs App Service Environment
 
-## Common
+## 1.0 - Common
 
 - App Service Plan
   - This of this as the rack where the compute resources are stored including CPU, memory and IO
@@ -13,7 +13,7 @@
 - Auto scalabiltiy
 - Monitoring and alerting
 
-## App Service "limitations"
+## 2.0 - App Service "limitations"
 
 - Always gets a public IP
 - The IP can change on restart, 
@@ -21,13 +21,13 @@
 - Premium plans have netwrok integration
 - Traffic to App Service can be filtered using access rules
 
-## ASE unique features
+## 3.0 - ASE unique features
 
 - Hardware and Network isolation
 - Deployed inside a vnet
 - Gets a private IP
 
-### ASE requirements
+### 3.1 - ASE requirements
 
 - Internal DNS or Azure Private Zone
   - To configure DNS in your own DNS server with your ILB ASE:
@@ -55,11 +55,11 @@
     - TCP to all IPs on port 12000
     - to the ASE subnet on all ports
 
-### ASE Networking
+### 3.2 - ASE Networking
 
 - Can set UDR to for example for all traffic through a Firewall
 
-### ASE Recommended for
+### 3.3 - ASE Recommended for
 
 - Highly regulated environments (PCI, HIPAA, Government)
 - For intensive loads where hardware and network isolation are required
