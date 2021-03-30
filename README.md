@@ -25,6 +25,7 @@
 
 - Hardware and Network isolation
 - Deployed inside a vnet
+- Gets a private IP
 
 ### ASE requirements
 
