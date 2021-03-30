@@ -29,8 +29,19 @@
 
 ### ASE requirements
 
-
 - Internal DNS or Azure Private Zone
+  - To configure DNS in your own DNS server with your ILB ASE:
+    - create a zone for <ASE name>.appserviceenvironment.net
+    - create an A record in that zone that points * to the ILB IP address
+    - create an A record in that zone that points @ to the ILB IP address
+    - create a zone in <ASE name>.appserviceenvironment.net named scm
+    - create an A record in the scm zone that points * to the ILB IP address
+  - To configure DNS in Azure DNS Private zones:
+    - create an Azure DNS private zone named <ASE name>.appserviceenvironment.net
+    - create an A record in that zone that points * to the ILB IP address
+    - create an A record in that zone that points @ to the ILB IP address
+    - create an A record in that zone that points *.scm to the ILB IP address
+
 - The required entries in an NSG, for an ASE to function, are to allow traffic:
   - Inbound
     - TCP from the IP service tag AppServiceManagement on ports 454,455
