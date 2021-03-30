@@ -7,25 +7,33 @@
   - An App service plan can houst "unlimited" sites
   - When App Service scales, what scales is the App Service
   - Consider multiple service plans if you need to scale the Web apps independently.
-- Portal management
+- Can support Window, Linux code (.Net,Python,Java,Node) and container workloads
+- Azure Portal management and role-based access control (management plane)
 - Deployment slots
 - Cutom domains
+- Local and attached storage
 - Auto scalabiltiy
 - Monitoring and alerting
+- Application Gateway in WAF mode is generally recommended to protect incoming requests against commong attacks
+- DevOps integration
+
 
 ## 2.0 - App Service "limitations"
 
 - Always gets a public IP
-- The IP can change on restart, 
+- The DNS name but the IP can change on 
   - IP can be fixed if an IP SSL certificate is deployed
-- Premium plans have netwrok integration
-- Traffic to App Service can be filtered using access rules
+- Premium plans have netwrok integration allowing access to resources on vnets
+- Traffic to App Service can be restricted by using access restrictions, for example:
+  - Filtering on the IP address from a corporate firewall
+  - Filtering from Application Gateway subnet
 
 ## 3.0 - ASE unique features
 
 - Hardware and Network isolation
 - Deployed inside a vnet
-- Gets a private IP
+- External and internal modes
+  - In internal mode the app service gets a private IP
 
 ### 3.1 - ASE requirements
 
