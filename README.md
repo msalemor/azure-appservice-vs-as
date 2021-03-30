@@ -71,3 +71,7 @@
 
 - Highly regulated environments (PCI, HIPAA, Government)
 - For intensive loads where hardware and network isolation are required
+
+### 4.0 - Reference
+
+- [Best practices](https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html)
