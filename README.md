@@ -29,8 +29,20 @@
 
 ### ASE requirements
 
-- There are ports that need to remain open in order for the ASE to work.
+
 - Internal DNS or Azure Private Zone
+- The required entries in an NSG, for an ASE to function, are to allow traffic:
+  - Inbound
+    - TCP from the IP service tag AppServiceManagement on ports 454,455
+    - TCP from the load balancer on port 16001
+    - from the ASE subnet to the ASE subnet on all ports
+  - Outbound
+    - UDP to all IPs on port 53
+    - UDP to all IPs on port 123
+    - TCP to all IPs on ports 80, 443
+    - TCP to the IP service tag Sql on ports 1433
+    - TCP to all IPs on port 12000
+    - to the ASE subnet on all ports
 
 ### ASE Networking
 
