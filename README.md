@@ -96,4 +96,4 @@ az appservice ase create -n $asename -g $rgname --vnet-name $vnetname \
 ## 4.0 - Reference
 
 - [Best practices](https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html)
-- [Preview ASE v3](https://azure.github.io/AppService/2020/09/22/asev3-public-preview-preannouncement.html)
+- [ASE v3 - Preview](https://azure.github.io/AppService/2020/09/22/asev3-public-preview-preannouncement.html)
