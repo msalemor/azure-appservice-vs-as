@@ -75,7 +75,7 @@
 - Highly regulated environments (PCI, HIPAA, Government)
 - For intensive loads where hardware and network isolation are required
 
-### 3.1 - Create an ASE
+### 3.1 - Create an ASE using Azure CLI
 
 ```bash
 rgname=rg-ase-eus-demo
