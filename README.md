@@ -1,6 +1,6 @@
-# Azure App Service vs App Service Environment
+# Azure App Service vs App Service Environment (ASE)
 
-## 1.0 - Common
+## 1.0 - Common features between App Servises and App Service Environments
 
 - App Service Plan
   - This of this as the rack where the compute resources are stored including CPU, memory and IO
@@ -18,7 +18,7 @@
 - DevOps integration
 
 
-## 2.0 - App Service "limitations"
+## 2.0 - App Service features
 
 - Always gets a public IP
 - The DNS name but the IP can change on 
@@ -28,7 +28,7 @@
   - Filtering on the IP address from a corporate firewall
   - Filtering from Application Gateway subnet
 
-## 3.0 - ASE unique features
+## 3.0 - App Service Environment features
 
 - Hardware and Network isolation
 - Deployed inside a vnet
