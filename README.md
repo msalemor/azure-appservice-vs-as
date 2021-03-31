@@ -1,4 +1,4 @@
-# Azure App Service vs App Service Environment (ASE)
+# Azure App Service vs App Service Environment v2 (ASE)
 
 ## 1.0 - Common features between App Servises and App Service Environments
 
@@ -96,3 +96,4 @@ az appservice ase create -n $asename -g $rgname --vnet-name $vnetname \
 ## 4.0 - Reference
 
 - [Best practices](https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html)
+- [Preview ASE v3](https://azure.github.io/AppService/2020/09/22/asev3-public-preview-preannouncement.html)
