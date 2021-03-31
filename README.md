@@ -75,6 +75,18 @@
 - Highly regulated environments (PCI, HIPAA, Government)
 - For intensive loads where hardware and network isolation are required
 
-### 4.0 - Reference
+### 3.1 - Create an ASE
+
+```bash
+az group create -g MyResourceGroup --location westeurope
+
+az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
+  --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/24
+
+az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
+  --subnet MyAseSubnet
+```
+
+## 4.0 - Reference
 
 - [Best practices](https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html)
