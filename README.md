@@ -78,13 +78,19 @@
 ### 3.1 - Create an ASE
 
 ```bash
-az group create -g MyResourceGroup --location westeurope
+rgname=rg-ase-eus-demo
+location=eastus
+vnetname=domainvent
+subnetname=aseSubnet
+asename=domainase
 
-az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
-  --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/24
+az group create -g $rgname --location $location
 
-az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
-  --subnet MyAseSubnet
+az network vnet create -g $rgname -n $vnetname \
+  --address-prefixes 10.0.0.0/16 --subnet-name $aseSubnet --subnet-prefixes 10.0.0.0/24
+
+az appservice ase create -n $asename -g $rgname --vnet-name $vnetname \
+  --subnet $subnetname
 ```
 
 ## 4.0 - Reference
