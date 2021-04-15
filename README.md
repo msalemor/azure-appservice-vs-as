@@ -20,7 +20,7 @@
 
 ## 2.0 - App Service features
 
-- Always gets a public IP
+- Always gets a public IP (that can change unless and IP SSL certificate is deployed)
 - The DNS name but the IP can change on 
   - IP can be fixed if an IP SSL certificate is deployed
 - Premium plans have netwrok integration allowing access to resources on vnets
@@ -33,7 +33,8 @@
 - Hardware and Network isolation
 - Deployed inside a vnet
 - External and internal modes
-  - In internal mode the app service gets a private IP
+  - In internal mode the app service gets a private IP and can talk to services on the VNet
+  - in external mode the app services gets a public IP and can talk to services on the VNet
 
 ### 3.1 - DNS requirements
 
