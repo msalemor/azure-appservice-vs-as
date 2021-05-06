@@ -94,7 +94,13 @@ az appservice ase create -n $asename -g $rgname --vnet-name $vnetname \
   --subnet $subnetname
 ```
 
-## 4.0 - Reference
+## 4.0 ASE v3 (Preview)
+
+- Requires two subnets (inbound and outboud)
+- No port requirements
+- No stamp cost, only pay for the instances
+
+## 5.0 - References
 
 - [Best practices](https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html)
 - [ASE v3 - Preview](https://azure.github.io/AppService/2020/09/22/asev3-public-preview-preannouncement.html)
