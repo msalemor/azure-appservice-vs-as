@@ -100,6 +100,11 @@ az appservice ase create -n $asename -g $rgname --vnet-name $vnetname \
 - No port requirements
 - No stamp cost, only pay for the instances
 
+## 5.0 Security Recommendations
+
+- Deploy to internal mode (ASE v2)
+- Open to external traffic with Application Gateway in WAF mode
+
 ## 5.0 - References
 
 - [Best practices](https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html)
